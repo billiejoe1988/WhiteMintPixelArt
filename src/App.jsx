@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import NavBar from './components/NavBar/NavBar.jsx';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer.jsx';
-import Sidebar from './components/Sidebar/Sidebar.jsx';
+import Sidebar from './components/sidebar/Sidebar.jsx';
 import Footer from './components/footer/Footer.jsx';
 import Home from './components/home/Home.jsx';
 
