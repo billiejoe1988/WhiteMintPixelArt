@@ -3,7 +3,7 @@ import "./navbar.css";
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import CartWidget from '../cartWidget/CartWidget';
+import CartWidget from '../CartWidget/CartWidget';
 import LogoMint from '/logoWhiteMint2.png';
 
 
