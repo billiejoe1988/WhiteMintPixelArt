@@ -1,0 +1,31 @@
+#spanNick{
+    color: gray;
+}
+.logoMint {
+    height: 3rem;
+    will-change: filter;
+    transition: filter 300ms;
+    cursor: pointer;
+  }
+  .logoMint:hover {
+    filter: drop-shadow(0 0 1em green);
+  }
+  .navbar{
+    width: 100%;
+  }
+
+  #link1,
+  #link2,
+  #link3,
+  #link4 {
+    padding: 6px;
+    color: greenyellow; 
+    transition: border-bottom 0.2s ease; 
+  }
+  
+  #link1:hover,
+  #link2:hover,
+  #link3:hover,
+  #link4:hover {
+    border-bottom: 1px solid white;
+  }

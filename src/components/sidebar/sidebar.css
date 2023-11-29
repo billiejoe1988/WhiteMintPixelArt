@@ -1,0 +1,37 @@
+.hover-underline {
+    transition: text-decoration 0.3s;
+  }
+
+  .hover-underline:hover {
+    text-decoration: underline;
+    color: greenyellow;
+  }
+
+  .contactImg{
+    height: 100px;
+    width: 100px;
+  }
+  .c{
+  background-image: url(/gifAlcantarilla.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  .textoContact{
+    background-color: black;
+    color: white;
+    opacity: 0.7;
+    padding-top: 1rem;
+    padding-bottom: 0 ;
+    margin-bottom: 0 ;
+    font-size: 0.9rem;
+    overflow-y: hidden;
+  }
+
+  .contact{
+    color: white;
+    size: 1.4rem;
+  }
+  .contact:hover{
+    color: greenyellow;
+    size: 1.6rem;
+  }

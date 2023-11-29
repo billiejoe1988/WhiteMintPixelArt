@@ -16,12 +16,12 @@ To reproduce the project on your local machine, follow these steps:
 
 0. **Clone the Repository:**
    ```bash
-   git clone https://github.com/billiejoe1988/PreEntrega2Arbelaiz.git
+   git clone https://github.com/billiejoe1988/WhiteMintPixelArt.git
 
 
 ## 1. **Navigate to the Project Directory:**
          in bash
-         cd PreEntrega2Arbelaiz
+         cd WhiteMintPixelArt
 
 
 ## 2. **Install Dependencies:**

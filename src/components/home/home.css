@@ -1,0 +1,36 @@
+.presentacion{
+    background-color: black;
+    opacity: 0.94;
+}
+.perfil{
+    width: 16rem;
+    padding: 1rem;
+}
+.im{
+        font-size: 36px;
+        text-align: center;
+        color: greenyellow;
+        border-right: 2px solid #333;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 0;
+        animation: typing 3s steps(30) 1s forwards, blink-caret 0.5s step-end infinite;
+      }
+      
+      @keyframes typing {
+        0% {
+          width: 0;
+        }
+        100% {
+          width: 100%;
+        }
+      }
+      
+      @keyframes blink-caret {
+        0%, 100% {
+          border-color: transparent;
+        }
+        50% {
+          border-color: #333;
+        }  
+}
