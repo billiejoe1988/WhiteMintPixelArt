@@ -1,0 +1,16 @@
+.linksCustom {
+    color: greenyellow;
+  }
+  
+  .linksCustom:focus {
+    color: whitesmoke;
+  }
+  
+  .linksCustom:hover {
+    color: white;
+  }
+  
+  .linksCustom:active {
+    color: white;
+  }
+  

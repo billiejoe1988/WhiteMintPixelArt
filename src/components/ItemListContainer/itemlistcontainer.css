@@ -1,5 +1,12 @@
 .itemEntrega{
-    color: greenyellow;
+    color: white;
+    background-color: black;
+    opacity: 0.8;
     font-size: 1.5rem;
     padding-bottom: 2rem;
+}
+.itemEntrega:hover {
+    Color: greenyellow;
+    text-underline-position: below;
+    font-size: 1.6rem;
 }

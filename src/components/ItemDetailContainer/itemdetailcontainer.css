@@ -1,0 +1,9 @@
+.ItemDetailContainer{
+    border: 2px;
+    border-color: yellowgreen;
+}
+@media (min-width: 700px) {
+    .custom-max-width {
+      max-width: 500px;
+    }
+  }
