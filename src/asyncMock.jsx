@@ -1,5 +1,5 @@
 import boss1 from "./gifBoss.gif";
-import gifBoss1 from "../src/assets/gifBoss1.gif";
+import gifBoss1 from "./src/assets/gifBoss1.gif";
 import gifBoss2 from "./gifBoss2.gif";
 import gifBoss5 from "./gifBoss5.gif";
 import setItems1 from "./setItems1.jpg";
