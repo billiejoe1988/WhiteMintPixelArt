@@ -5,6 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import CartWidget from '../CartWidget/CartWidget';
 import LogoMint from '/logoWhiteMint2.png';
+import { NavLink, Link } from 'react-router-dom';
 
 
 const NavBar = () => {
@@ -12,15 +13,17 @@ const NavBar = () => {
   return (
   <Navbar collapseOnSelect expand="lg" className="bg-black navbar mb-2 mt-0">
     <Container>
-      <img className="logoMint" src={LogoMint} alt="logo" />
-      <Navbar.Brand href="#home" className='text-white' style={{ fontSize: '18px' }}>WhiteMint Pixel Art</Navbar.Brand>
-      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-      <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-center">
-          <Nav className='mx-auto'>
-              <a href="#"><button className="nav-link" id='link1'>Bosses</button></a>
-              <a href="#"><button className="nav-link" id='link2'>Sets Games</button></a>
-              <a href="#"><button className="nav-link" id='link3'>Caracters</button></a>
-              <a href="#"><button className="nav-link" id='link4'>Others</button></a>
+    <Link to='/'>
+           <img className="logoMint" src={LogoMint} alt="logo" />
+        </Link>
+        <Navbar.Brand href='/' className='text-white' style={{ fontSize: '18px' }}>WhiteMint Pixel Art</Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
+        <Nav className="mr-auto my-auto">
+            <NavLink to={'/category/boss'} className="nav-link" id='link1'>Bosses</NavLink>
+            <NavLink to={'/category/set'} className="nav-link" id='link2'>Game Sets</NavLink>
+            <NavLink to={'/category/caracter'} className="nav-link" id='link3'>Caracters</NavLink>
+            <NavLink to={'/category/other'} className="nav-link" id='link4'>Others</NavLink>
           </Nav>
           <Navbar.Text className='text-white'>
             Signed in as: <a href="#login" id="spanNick">BillieJoe</a>
