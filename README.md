@@ -42,4 +42,4 @@ This will start the development server, and you can view the project at http://l
 - Checkout functionality for completing the purchase.
 
 ### Contributors
- Mauricio Arbelaiz (GitHub:billiejoe1988)
+ Mauricio Arbelaiz (GitHub:billiejoe1988).
