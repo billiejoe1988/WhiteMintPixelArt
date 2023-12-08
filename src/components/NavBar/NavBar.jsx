@@ -18,8 +18,8 @@ const NavBar = () => {
         </Link>
         <Navbar.Brand href='/' className='text-white' style={{ fontSize: '18px' }}>WhiteMint Pixel Art</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
-        <Nav className="mr-auto my-auto">
+        <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-center">
+        <Nav className='mx-auto'>
             <NavLink to={'/category/boss'} className="nav-link" id='link1'>Bosses</NavLink>
             <NavLink to={'/category/set'} className="nav-link" id='link2'>Game Sets</NavLink>
             <NavLink to={'/category/caracter'} className="nav-link" id='link3'>Caracters</NavLink>
