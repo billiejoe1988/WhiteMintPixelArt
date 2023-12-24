@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react';
 import ItemCount from '../ItemCount/ItemCount.jsx';
-import './ItemDetail.css';
+import './itemdetail.css';
 import { Link, NavLink } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext';
 
