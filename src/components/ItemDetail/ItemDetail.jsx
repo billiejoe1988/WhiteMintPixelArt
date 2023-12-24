@@ -1,17 +1,37 @@
-import React from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import ItemCount from '../ItemCount/ItemCount.jsx';
+import './ItemDetail.css';
+import { Link, NavLink } from 'react-router-dom';
+import { CartContext } from '../../context/CartContext';
 
 const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
+  const [quantityAdded, setQuantityAdded] = useState(0);
+
+  const { addItem } = useContext(CartContext);
+
+  const hangleOnAdd = (quantity) => {
+    setQuantityAdded(quantity);
+    const item = {
+      id, name, price, img
+    };
+    addItem(item, quantity);
+  }
+
   return (
-    <div className='d-flex justify-content-center align-items-center h-50'>
-      <article className='CardItem  w-60mx-auto custom-max-width'>
+    <section className='d-flex justify-content-center align-items-center h-50'>
+      <article className='CardItem w-60 mx-auto custom-max-width'>
         <header className='Header'>
           <h2 className='ItemHeader'>
             {name}
           </h2>
         </header>
         <div className="d-flex justify-content-center">
-          <img src={img} alt={name} className='ItemImgDet w-100 rounded' />
+          <img
+            src={img}
+            alt={name}
+            className='ItemImgDet w-100 rounded'
+            style={{ width: '300px', height: '300px' }}
+          />
         </div>
         <section className='p-4'>
           <p className='Info'>
@@ -25,11 +45,22 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
           </p>
         </section>
         <footer className='ItemFooterDetail'>
-          <ItemCount initial={1} stock={stock} onAdd={(quantity) => console.log('Cantidad agregada ', quantity)} />
+          {
+            quantityAdded > 0 ? (
+              <>
+                <Link to='/cart' className='button m-3'>
+                  Proceed to checkout
+                </Link>
+                <NavLink to='/' className='button m-3'>Add More</NavLink>
+              </>
+            ) : (
+              <ItemCount initial={1} stock={stock} onAdd={hangleOnAdd} />
+            )
+          }
         </footer>
       </article>
-    </div>
+    </section>
   );
-}
+};
 
 export default ItemDetail;
