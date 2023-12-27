@@ -70,21 +70,23 @@ export const CheckOut = () => {
 }
 
     if (loading) {
-        return <h1>Your order is being generated</h1>
+        return <div className='py-5 bg-white'>
+            <h1 className='py-5 textos'>Your order is being generated...</h1>
+        </div>
     }
 
     if (orderId) {
-        return <div>
-            <h1>Order created successfully!</h1>
-            <h2>Order Id: {orderId}</h2>
+        return <div className='py-5 bg-white'>
+            <h1 className='textos pb-5'>Order created successfully!</h1>
+            <h2 className='text-black'>Order Id: {orderId}</h2>
         </div>
     }
 
     return (
-        <div>
-            <h1>CheckOut</h1>
+        <section className='py-5 bg-white'>
+            <h1 className='textos pb-5'>CheckOut</h1>
             <CheckOutForm onConfirm={createOrder} />
-        </div>
+        </section>
     )
 }
 export default CheckOut;

@@ -55,32 +55,32 @@ const CheckOutForm = ({ onConfirm }) => {
   };
 
   return (
-    <section className='container'>
+    <section className='container d-flex flex-column align-items-center py-5'>
       <form onSubmit={handleConfirm} className='form'>
-        <label className='Label'>
-          nombre
-          <input
-            className='Input'
+        <label className='text-dark p-2'>
+          Name
+          <input 
+            className='Input border border-success rounded mx-3'
             type='text'
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
           />
         </label>
-        <label className='Label'>
-          telefono
+        <label className='text-dark p-2'>
+          Phone
           <input
-            className='Input'
+            className='Input border border-success rounded mx-3'
             type='number'
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
             required
           />
         </label>
-        <label className='Label'>
-          mail
+        <label className='text-dark p-2'>
+          Email
           <input
-            className='Input'
+            className='Input border border-success rounded mx-3'
             type='email'
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -90,8 +90,8 @@ const CheckOutForm = ({ onConfirm }) => {
         {validationError && (
           <p className='ValidationError'>Please fill in all the required fields.</p>
         )}
-        <div className='Label'>
-          <button type='submit' className='Button'>Create Order</button>
+        <div className='py-5'>
+          <button type='submit' className='button'>Create Order</button>
         </div>
       </form>
     </section>

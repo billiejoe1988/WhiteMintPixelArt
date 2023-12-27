@@ -11,7 +11,7 @@ import { NavLink, Link } from 'react-router-dom';
 const NavBar = () => {
 
   return (
-  <Navbar collapseOnSelect expand="lg" className="bg-black navbar mb-2 mt-0">
+  <Navbar collapseOnSelect expand="lg" className="bg-black navbar mb-4">
     <Container>
     <Link to='/'>
            <img className="logoMint" src={LogoMint} alt="logo" />
@@ -25,9 +25,6 @@ const NavBar = () => {
             <NavLink to={'/category/caracter'} className="nav-link" id='link3'>Caracters</NavLink>
             <NavLink to={'/category/other'} className="nav-link" id='link4'>Others</NavLink>
           </Nav>
-          <Navbar.Text className='text-white'>
-            Signed in as: <a href="#login" id="spanNick">BillieJoe</a>
-          </Navbar.Text>
         <CartWidget className='my-auto'/>
       </Navbar.Collapse>
     </Container>

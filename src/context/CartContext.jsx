@@ -1,5 +1,4 @@
 import { createContext, useState } from 'react';
-import Swal from 'sweetalert2';
 import { toast } from 'react-toastify';
 
 export const CartContext = createContext({
@@ -14,7 +13,7 @@ export const CartProvider = ({ children }) => {
 
   const totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
   const total = cart.reduce((total, item) => total + item.price * item.quantity, 0);
-
+  
   const isInCart = (itemId) => {
     return cart.some((prod) => prod.id === itemId);
   };
@@ -37,7 +36,6 @@ export const CartProvider = ({ children }) => {
       });
     }
   };
-  
 
   const removeItem = (itemId) => {
     setCart((prev) => {
@@ -53,21 +51,15 @@ export const CartProvider = ({ children }) => {
       } else {
         const cartUpdated = prev.filter((prod) => prod.id !== itemId);
         console.log("Item removed from cart:", itemId);
-        toast.warning("Item removed from the cart.");
+        toast.warning(`Item removed from the cart.`);
         return cartUpdated;
       }
     });
   };
-  
 
   const clearCart = () => {
     setCart([]);
     console.log("Cart cleared");
-    Swal.fire({
-      title: 'Cart Cleared!',
-      text: 'Your cart has been successfully cleared.',
-      icon: 'success',
-    });
   };
 
   return (

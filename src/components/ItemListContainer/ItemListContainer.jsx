@@ -38,7 +38,7 @@ const ItemListContainer = ({ greeting }) => {
   }, [categoryId]);
 
   return (
-    <ul className='container-fluid'>
+    <ul className='container-fluid pb-5'>
       <h1 className='itemEntrega py-4'>{categoryText}</h1>
       <li className='itemList'>
         <ItemList products ={products} />

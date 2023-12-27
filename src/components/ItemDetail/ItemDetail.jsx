@@ -48,10 +48,10 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
           {
             quantityAdded > 0 ? (
               <>
-                <Link to='/cart' className='button m-3'>
+                <Link to='/cart' className='button m-3 textos border'>
                   Proceed to checkout
                 </Link>
-                <NavLink to='/' className='button m-3'>Add More</NavLink>
+                <NavLink to='/' className='button m-3 text-white'>Add More</NavLink>
               </>
             ) : (
               <ItemCount initial={1} stock={stock} onAdd={hangleOnAdd} />
