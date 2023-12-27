@@ -8,8 +8,8 @@ import Sidebar from '../sidebar/Sidebar'
 const Footer = () => {
     return (
       <section>
-         <Home />
          <Sidebar />
+         <Home />
           <div className='flex'>
             <a href="https://vitejs.dev" target="_blank">
               <img src={viteLogo} className="logo" alt="Vite logo" />
