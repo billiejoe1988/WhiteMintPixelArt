@@ -21,7 +21,7 @@ const Footer = () => {
               <img className="logo" src={bootLogo} alt="logoBoostrap" />
             </a>
             <p className="cierre text-white">
-            This web app was created for Mauricio Arbelaiz using React, Vite, and Bootstrap
+            This web app was created for Mauri Arbelaiz using React, Vite, and Bootstrap
             </p>
           </div>
         </section>

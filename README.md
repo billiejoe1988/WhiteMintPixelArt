@@ -2,7 +2,7 @@
 
 ![Whitemint Pixel Art Logo](./public/logoWhiteMint2.png)
 
-This project is a web e-commerce platform named Whitemint Pixel Art, created by Mauricio Arbelaiz as part of the React JS course at Coderhouse. The platform specializes in the sale of pixel art, catering to both individual customers and the gaming industry. The pixel art offerings include animated game bosses, dog portraits, characters, game backgrounds, and a miscellaneous category. The platform provides a user-friendly shopping experience with a shopping cart and various functionalities.
+This project is a web e-commerce platform named Whitemint Pixel Art, created by Mauri Arbelaiz as part of the React JS course at Coderhouse. The platform specializes in the sale of pixel art, catering to both individual customers and the gaming industry. The pixel art offerings include animated game bosses, dog portraits, characters, game backgrounds, and a miscellaneous category. The platform provides a user-friendly shopping experience with a shopping cart and various functionalities.
 
 ## Technologies Used
 

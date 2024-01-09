@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext';
 
 const CartWidget = () => {
-  const { totalQuantity } = useContext(CartContext)
+  const { cart, totalQuantity } = useContext(CartContext)
 
   return (
-    <Link to='/cart' className='CartWidget flex' style={{display: totalQuantity > 0 ? 'block' : 'none'}}>
+    <Link to='/cart' className='CartWidget d-flex align-items-center'>
         <img className="logoMint" src={cartIcon} alt="cart-widget" />
-        { totalQuantity }
+        {cart.length !== 0 && <p className="m-0 ml-2">{totalQuantity}</p>}
     </Link>
   )
 }
