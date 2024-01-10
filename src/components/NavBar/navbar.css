@@ -24,5 +24,6 @@
   .link2:hover,
   .link3:hover,
   .link4:hover {
+    color : white ;
     border-bottom: 1px solid white;
   }
