@@ -12,7 +12,7 @@ function SideForm() {
         <Form.Control as="textarea" rows={3} placeholder="Enter your query here"/>
       </Form.Group>
       <div className='p-4'>
-          <button id="contactame" className="button" type="submit">Send</button>
+          <button className="button" type="submit">Send</button>
       </div>
     </Form>
   );

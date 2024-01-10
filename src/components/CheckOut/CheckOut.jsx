@@ -1,4 +1,3 @@
-import './checkout.css'
 import { db } from '../../services/firebase/firebaseConfig'
 import { useContext, useState } from 'react'
 import { getDocs, collection, query, where, addDoc, documentId, Timestamp, writeBatch } from 'firebase/firestore'
