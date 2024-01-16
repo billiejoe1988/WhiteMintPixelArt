@@ -8,7 +8,13 @@ This project is a web e-commerce platform named Whitemint Pixel Art, created by 
 
 - React.js
 - Vite
-- Bootstrap
+- Bootstra
+- FireBase
+
+## library
+
+- SweetAlert
+- Toastify
 
 ## Getting Started
 

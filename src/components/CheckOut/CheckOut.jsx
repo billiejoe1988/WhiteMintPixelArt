@@ -5,8 +5,10 @@ import CheckOutForm from '../CheckOutForm/CheckOutForm'
 import { CartContext } from '../../context/CartContext'
 
 export const CheckOut = () => {
-    const [loading, setLoading] = useState(false)
-    const [orderId, setOrderId] = useState('')
+    const [loading, setLoading] = useState(false);
+    const [orderId, setOrderId] = useState('');
+    const [purchaseDate, setPurchaseDate] = useState('');
+    const [purchaseDay, setPurchaseDay] = useState('');
 
     const { cart, total, clearCart } = useContext(CartContext)
 
@@ -18,8 +20,13 @@ export const CheckOut = () => {
                 buyer: { name, phone, email },
                 items: cart,
                 total: total,
-                date: Timestamp.fromDate(new Date())
-            }
+                date: Timestamp.fromDate(new Date()),
+                purchaseDate: new Date().toLocaleString(),
+                purchaseDay: new Date().toLocaleDateString('en-US', { weekday: 'long' }),
+              };
+        
+              setPurchaseDate(objOrder.purchaseDate);
+              setPurchaseDay(objOrder.purchaseDay);
 
             const batch = writeBatch(db)
 
@@ -75,11 +82,15 @@ export const CheckOut = () => {
     }
 
     if (orderId) {
-        return <div className='py-5 bg-white'>
+        return (
+          <div className='py-5 bg-white'>
             <h1 className='textos pb-5'>Order created successfully!</h1>
             <h2 className='text-black'>Order Id: {orderId}</h2>
-        </div>
-    }
+            <p className='text-black'>Purchase Date: {purchaseDate}</p>
+            <p className='text-black'>Purchase Day: {purchaseDay}</p>
+          </div>
+        );
+      }
 
     return (
         <section className='py-5 bg-white'>
