@@ -6,12 +6,13 @@ const CheckOutForm = ({ onConfirm }) => {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
+  const [emailRepetido, setEmailRepetido] = useState('');
   const [validationError, setValidationError] = useState(false);
 
   const handleConfirm = async (e) => {
     e.preventDefault();
 
-    if (!name || !phone || !email) {
+    if (!name || !phone || !email || !emailRepetido || email !== emailRepetido) {
       setValidationError(true);
       return;
     }
@@ -86,8 +87,18 @@ const CheckOutForm = ({ onConfirm }) => {
             required
           />
         </label>
+        <label className='text-dark p-2'>
+          Repetir Email
+          <input
+            className='Input border border-success rounded mx-3'
+            type='email'
+            value={emailRepetido}
+            onChange={(e) => setEmailRepetido(e.target.value)}
+            required
+          />
+        </label>
         {validationError && (
-          <p className='ValidationError'>Please fill in all the required fields.</p>
+          <p className='ValidationError p-5 text-black'>Please fill in all the required fields and ensure email addresses match.</p>
         )}
         <div className='py-5'>
           <button type='submit' className='button'>Create Order</button>
