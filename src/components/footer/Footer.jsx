@@ -25,7 +25,7 @@ const Footer = () => {
               <img className="logo" src={fireLogo} alt="logoFireBase" />
             </a>
             <p className="cierre text-white">
-              This web app was created for Mauri Arbelaiz using React, Vite, FireBase and Bootstrap
+              This web app was created for Mauri Arbelaiz using React, Vite, FireBase and Boostrap
             </p>
           </div>
         </section>
